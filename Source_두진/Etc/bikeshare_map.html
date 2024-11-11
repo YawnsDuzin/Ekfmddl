@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2effc54cd39dae9fd99ed6e09f7414f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2effc54cd39dae9fd99ed6e09f7414f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2effc54cd39dae9fd99ed6e09f7414f4 = L.map(
+                "map_2effc54cd39dae9fd99ed6e09f7414f4",
+                {
+                    center: [37.55, 126.92],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d8941beea56ffa22399abbdcc6f50143 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_d8941beea56ffa22399abbdcc6f50143.addTo(map_2effc54cd39dae9fd99ed6e09f7414f4);
+        
+    
+            var marker_cluster_eff8a35aecf6c193ddf9b366c0117593 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_00f7fd2ee49d374f4d97cdfa7b19f2b4 = L.marker(
+                [37.556, 126.91],
+                {}
+            ).addTo(marker_cluster_eff8a35aecf6c193ddf9b366c0117593);
+        
+    
+            var icon_1e30f823c13acc500e1a29bf3cc251f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_00f7fd2ee49d374f4d97cdfa7b19f2b4.setIcon(icon_1e30f823c13acc500e1a29bf3cc251f3);
+        
+    
+        var popup_b49936814f945776c7cc882c3fd95cec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b806bb3251bb7e8e0746635f8089e290 = $(`<div id="html_b806bb3251bb7e8e0746635f8089e290" style="width: 100.0%; height: 100.0%;">망원역 1번출구 앞 유동인구: 1000 이용량: 500</div>`)[0];
+                popup_b49936814f945776c7cc882c3fd95cec.setContent(html_b806bb3251bb7e8e0746635f8089e290);
+            
+        
+
+        marker_00f7fd2ee49d374f4d97cdfa7b19f2b4.bindPopup(popup_b49936814f945776c7cc882c3fd95cec)
+        ;
+
+        
+    
+    
+            var marker_da3b8706598fb001d013ad62e4400c49 = L.marker(
+                [37.55, 126.914],
+                {}
+            ).addTo(marker_cluster_eff8a35aecf6c193ddf9b366c0117593);
+        
+    
+            var icon_cfbdb43806296427bfb03c4503fe3767 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da3b8706598fb001d013ad62e4400c49.setIcon(icon_cfbdb43806296427bfb03c4503fe3767);
+        
+    
+        var popup_c57e1466115bf2685985e728e6f98ff4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54fa8c075d7541fcb758233bbad9da54 = $(`<div id="html_54fa8c075d7541fcb758233bbad9da54" style="width: 100.0%; height: 100.0%;">합정역 2번출구 앞 유동인구: 1500 이용량: 800</div>`)[0];
+                popup_c57e1466115bf2685985e728e6f98ff4.setContent(html_54fa8c075d7541fcb758233bbad9da54);
+            
+        
+
+        marker_da3b8706598fb001d013ad62e4400c49.bindPopup(popup_c57e1466115bf2685985e728e6f98ff4)
+        ;
+
+        
+    
+    
+            var marker_490f4abc97f972c12d19e10fab882394 = L.marker(
+                [37.558, 126.923],
+                {}
+            ).addTo(marker_cluster_eff8a35aecf6c193ddf9b366c0117593);
+        
+    
+            var icon_6124b20cf05bb28736fa9d643964bac4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_490f4abc97f972c12d19e10fab882394.setIcon(icon_6124b20cf05bb28736fa9d643964bac4);
+        
+    
+        var popup_f69dfad3d5eca1803edb655f8b9fb626 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f834e1d26710d59265e2775b2bc46664 = $(`<div id="html_f834e1d26710d59265e2775b2bc46664" style="width: 100.0%; height: 100.0%;">홍대입구역 3번출구 앞 유동인구: 1200 이용량: 600</div>`)[0];
+                popup_f69dfad3d5eca1803edb655f8b9fb626.setContent(html_f834e1d26710d59265e2775b2bc46664);
+            
+        
+
+        marker_490f4abc97f972c12d19e10fab882394.bindPopup(popup_f69dfad3d5eca1803edb655f8b9fb626)
+        ;
+
+        
+    
+    
+            marker_cluster_eff8a35aecf6c193ddf9b366c0117593.addTo(map_2effc54cd39dae9fd99ed6e09f7414f4);
+        
+</script>
+</html>
