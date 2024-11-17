@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .table {
+            margin-bottom: 0;
+        }
+        
+        .table thead th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .correlation-value {
+            font-family: monospace;
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        .description-text {
+            color: #6c757d;
+        }
+        
+        .scroll-container {
+            overflow-x: auto;
+            padding: 0 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <div class="card-header">
+            <h5 class="mb-0">데이터 현황표</h5>
+        </div>
+        <div class="scroll-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">독립변수</th>
+                        <th style="text-align: center;">종속변수</th>
+                        <th style="text-align: center;">상관계수</th>
+                        <th style="text-align: center;">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>이상패턴_5min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.219770</span></td>
+                        <td class="description-text">이전 한달 간의, 이상패턴 5분안에 반납한 횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_7min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.221525</span></td>
+                        <td class="description-text">이전 한달 간의, 이상패턴 7분안에 반납한 횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.223101</span></td>
+                        <td class="description-text">이전 한달 간의, 이상패턴 10분안에 반납한 횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용거리</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.221608</span></td>
+                        <td class="description-text">이전 1달 간의, 이용거리 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용거리</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.228914</span></td>
+                        <td class="description-text">이전 2달 간의, 이용거리 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용거리</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.233798</span></td>
+                        <td class="description-text">이전 3달 간의, 이용거리 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용시간</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.232376</span></td>
+                        <td class="description-text">이전 1달 간의, 이용시간 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용시간</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.243231</span></td>
+                        <td class="description-text">이전 2달 간의, 이용시간 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용시간</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.250303</span></td>
+                        <td class="description-text">이전 3달 간의, 이용시간 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.208865</span></td>
+                        <td class="description-text">이전 1달 간의, 이용횟수 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.222733</span></td>
+                        <td class="description-text">이전 2달 간의, 이용횟수 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.237070</span></td>
+                        <td class="description-text">이전 3달 간의, 이용횟수 합계</td>
+                    </tr>
+                    <tr>
+                        <td>이용횟수_비교</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">-0.038877</span></td>
+                        <td class="description-text">(23년의 이용횟수 월별 평균)과 (이전일자_1mon_이용횟수) 의 증감량</td>
+                    </tr>
+                    <tr>
+                        <td>이용거리_비교</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">-0.010346</span></td>
+                        <td class="description-text">(23년의 이용거리 월별 평균)과 (이전일자_1mon_이용거리) 의 증감량</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_비율</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">-0.022362</span></td>
+                        <td class="description-text">(이전일자_1mon_이용횟수)의 (이상패턴_5min_횟수)의 비율</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_7-5min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.050599</span></td>
+                        <td class="description-text">(이상패턴_7min_횟수) - (이상패턴_5min_횟수)</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10-5min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.061586</span></td>
+                        <td class="description-text">(이상패턴_10min_횟수) - (이상패턴_5min_횟수)</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10-7min_횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.041474</span></td>
+                        <td class="description-text">(이상패턴_10min_횟수) - (이상패턴_7min_횟수)</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3-1mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.219577</span></td>
+                        <td class="description-text">(이전일자_3mon_이용횟수) - (이전일자_1mon_이용횟수)</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3-2mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.171451</span></td>
+                        <td class="description-text">(이전일자_3mon_이용횟수) - (이전일자_2mon_이용횟수)</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2-1mon_이용횟수</td>
+                        <td>고장여부</td>
+                        <td><span class="correlation-value">0.237565</span></td>
+                        <td class="description-text">(이전일자_2mon_이용횟수) - (이전일자_1mon_이용횟수)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">독립변수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>이상패턴_5min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_7min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용거리</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용거리</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용거리</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용시간</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용시간</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용시간</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_1mon_이용횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2mon_이용횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3mon_이용횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이용횟수_비교</td>
+                    </tr>
+                    <tr>
+                        <td>이용거리_비교</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_비율</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_7-5min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10-5min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이상패턴_10-7min_횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3-1mon_이용횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_3-2mon_이용횟수</td>
+                    </tr>
+                    <tr>
+                        <td>이전일자_2-1mon_이용횟수</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
